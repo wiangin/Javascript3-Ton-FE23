@@ -1,0 +1,17 @@
+footer{
+    background-color: rgb(220,174,150);
+    color: wheat;
+    font-weight: bolder;
+   
+}
+
+p {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+#copy-symbol{
+    font-size: larger;
+
+}

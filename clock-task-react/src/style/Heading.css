@@ -1,0 +1,17 @@
+.heading{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(138, 154, 91);
+    color: wheat;
+   
+}
+
+#logo{
+    padding: 18px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+  }
+  
