@@ -1,4 +1,4 @@
-import "../style/Heading.css"
+import "../style/HeadingComp.css"
 export function Heading(){
     return(
         <div className="heading">
