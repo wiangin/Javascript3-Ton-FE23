@@ -11,22 +11,12 @@ function App() {
       useEffect(()=> {
         function startTime(){
           const currentDay = new Date();
-          let hour = currentDay.getHours();
-          let minut = currentDay.getMinutes();
-          let second = currentDay.getSeconds();
-      
-          // console.log(hour + ":" + minut + ":" + second );
-          minut = checkZeroNum(minut)
-          second = checkZeroNum(second);
-          setTime(hour + ":" + minut + ":" + second);
-      
+          const currenTime = currentDay.toLocaleTimeString();
+          setTime(currenTime);      
         };
 
-        function checkZeroNum(i){
-          return i < 10 ? "0" + i : i; 
-        };
         setInterval(startTime,1000);
-        startTime();
+        // startTime();
         return clearInterval(setInterval(startTime,1000));
       });
 
