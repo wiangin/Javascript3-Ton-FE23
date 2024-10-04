@@ -15,7 +15,7 @@ function App() {
         };
 
         setInterval(startTime,1000);
-        // startTime();
+        
         return () => {
           clearInterval(setInterval(startTime,1000));
         }
