@@ -25,7 +25,7 @@ function App() {
   return (
         <div className = 'main-container'>
           <Heading/>
-          <Clock time={timeState}/>
+          <Clock currentTime={timeState}/>
           <Footer/>
         </div>
   );
