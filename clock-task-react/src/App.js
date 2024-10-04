@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [timeState,setTimeState] = useState("Time start Soon");
+  
       useEffect(()=> {
         function startTime(){
           const currenTime = new Date().toLocaleTimeString();
@@ -15,7 +16,7 @@ function App() {
         };
 
         setInterval(startTime,1000);
-        
+
         return () => {
           clearInterval(setInterval(startTime,1000));
         }
