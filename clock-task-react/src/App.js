@@ -10,15 +10,16 @@ function App() {
   const [time,setTime] = useState("Time start Soon");
       useEffect(()=> {
         function startTime(){
-          const currentDay = new Date();
-          const currenTime = currentDay.toLocaleTimeString();
+          const currenTime = new Date().toLocaleTimeString();
           setTime(currenTime);      
         };
 
         setInterval(startTime,1000);
         // startTime();
-        return clearInterval(setInterval(startTime,1000));
-      });
+        return () => {
+          clearInterval(setInterval(startTime,1000));
+        }
+      },[]);
 
   return (
         <div className = 'main-container'>
