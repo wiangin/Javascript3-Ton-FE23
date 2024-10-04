@@ -7,11 +7,11 @@ import { useState, useEffect } from 'react';
 
 
 function App() {
-  const [time,setTime] = useState("Time start Soon");
+  const [timeState,setTimeState] = useState("Time start Soon");
       useEffect(()=> {
         function startTime(){
           const currenTime = new Date().toLocaleTimeString();
-          setTime(currenTime);      
+          setTimeState(currenTime);      
         };
 
         setInterval(startTime,1000);
@@ -24,7 +24,7 @@ function App() {
   return (
         <div className = 'main-container'>
           <Heading/>
-          <Clock props={time}/>
+          <Clock time={timeState}/>
           <Footer/>
         </div>
   );
